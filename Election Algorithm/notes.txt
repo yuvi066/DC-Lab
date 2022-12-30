@@ -1,0 +1,15 @@
+Election Algorithms: 
+
+Election algorithms choose a process from a group of processors to act as a coordinator. If the coordinator process crashes due to some reasons, then a
+new coordinator is elected on other processor. Election algorithm basically determines where a new copy of the coordinator should be restarted. Election algorithm 
+assumes that every active process in the system has a unique priority number. The process with highest priority will be chosen as a new coordinator. Hence, when
+a coordinator fails, this algorithm elects that active process which has highest priority number.Then this number is send to every active process in the 
+distributed system. We have two election algorithms for two different configurations of a distributed system. 
+
+The Bully Algorithm : 
+    This algorithm applies to system where every process can send a message to every other process in the system.
+    
+The Ring Algorithm :
+    This algorithm applies to systems organized as a ring(logically or physically). In this algorithm we assume that the link between the process are unidirectional 
+    and every process can message to the process on its right only. Data structure that this algorithm uses is active list, a list that has a priority number of all 
+    active processes in the system. 
